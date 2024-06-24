@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "36730917588",
+    "project_id": "profitnow",
+    "storage_bucket": "profitnow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36730917588:android:d74a22693276c5a3db6141",
+        "android_client_info": {
+          "package_name": "com.profitnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdl1lQXYMy2DuMgpbHn8tUkFbQSav0ya0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

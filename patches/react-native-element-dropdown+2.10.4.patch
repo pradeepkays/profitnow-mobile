@@ -1,0 +1,23 @@
+diff --git a/node_modules/react-native-element-dropdown/src/components/Dropdown/index.tsx b/node_modules/react-native-element-dropdown/src/components/Dropdown/index.tsx
+index c6125da..f52b326 100644
+--- a/node_modules/react-native-element-dropdown/src/components/Dropdown/index.tsx
++++ b/node_modules/react-native-element-dropdown/src/components/Dropdown/index.tsx
+@@ -421,6 +421,7 @@ const DropdownComponent: <T>(
+             )}
+             underlayColor={activeColor}
+             onPress={() => onSelect(item)}
++            disabled={_.get(item, labelField) === 'No records'}
+           >
+             <View
+               style={StyleSheet.flatten([
+@@ -527,7 +528,9 @@ const DropdownComponent: <T>(
+               keyboardShouldPersistTaps="handled"
+               ref={refList}
+               onScrollToIndexFailed={scrollIndex}
+-              data={listData}
++              data={listData?.length ? listData : [
++                {[labelField]: 'No records', [valueField]: 0}
++              ]}
+               inverted={isTopPosition ? inverted : false}
+               renderItem={_renderItem}
+               keyExtractor={(_item, index) => index.toString()}

@@ -1,0 +1,18 @@
+diff --git a/node_modules/react-native-calendar-strip/src/CalendarStrip.js b/node_modules/react-native-calendar-strip/src/CalendarStrip.js
+index fe4d62d..a79ff9c 100644
+--- a/node_modules/react-native-calendar-strip/src/CalendarStrip.js
++++ b/node_modules/react-native-calendar-strip/src/CalendarStrip.js
+@@ -527,8 +527,12 @@ class CalendarStrip extends Component {
+   }
+ 
+   renderDay(props) {
++    const __props = {...props};
++    if(__props?.key){
++      delete __props?.key;
++    }
+     return (
+-      <CalendarDay {...props} />
++      <CalendarDay key={props?.key} {...__props} />
+     );
+   }
+ 

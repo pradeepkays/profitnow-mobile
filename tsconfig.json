@@ -1,0 +1,23 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json", /* Recommended React Native TSConfig base */
+  "compilerOptions": {
+    "jsx": "react",
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    /* Completeness */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "components/*": [
+        "src/Component/*"
+      ],
+      "@vn.starlingTech/*": ["vn.starlingTech/*"],
+      "@starling/theme": ["vn.starlingTech/theme/theming"],
+      "src/*": [
+        "src/*"
+      ],
+    }
+  }
+}
